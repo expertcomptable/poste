@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche de poste — Conseiller·ère comptable confirmé·e — Hermès Consultants</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hermes-navy: #2d3561;
+            --hermes-orange: #f47e3c;
+            --hermes-mint: #a8c9c3;
+            --hermes-cream: #f8f6f1;
+            --hermes-slate: #4a5568;
+            --hermes-light: #e8e6e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: linear-gradient(135deg, var(--hermes-cream) 0%, #ffffff 100%);
+            color: var(--hermes-slate);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(26, 58, 82, 0.12);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: var(--hermes-navy);
+            padding: 60px 50px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(244, 126, 60, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-accent {
+            color: var(--hermes-orange);
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 38px;
+            font-weight: 600;
+            color: white;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--hermes-orange);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        .section {
+            margin-bottom: 45px;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--hermes-navy);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--hermes-orange);
+            display: inline-block;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: var(--hermes-slate);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(244, 126, 60, 0.15) 0%, rgba(244, 126, 60, 0.05) 100%);
+            padding: 25px 30px;
+            border-left: 4px solid var(--hermes-orange);
+            margin: 25px 0;
+            border-radius: 2px;
+        }
+
+        .team-list {
+            color: var(--hermes-navy);
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .condition-item {
+            padding: 18px 22px;
+            background: var(--hermes-cream);
+            border-radius: 2px;
+            font-size: 15px;
+            color: var(--hermes-navy);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .condition-item:hover {
+            background: white;
+            border-color: var(--hermes-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 53, 97, 0.08);
+        }
+
+        .condition-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--hermes-navy);
+            font-weight: 600;
+        }
+
+        .cta {
+            background: var(--hermes-navy);
+            padding: 40px 50px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 26px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cta-email {
+            display: inline-block;
+            background: var(--hermes-orange);
+            color: white;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-email:hover {
+            background: #ff8e50;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(244, 126, 60, 0.3);
+        }
+
+        .cta-details {
+            color: var(--hermes-light);
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .process {
+            background: var(--hermes-cream);
+            padding: 25px 30px;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: var(--hermes-orange);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 13px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--hermes-light);
+            font-size: 13px;
+            color: var(--hermes-slate);
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .header, .content, .cta {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">HERMÈS <span class="logo-accent">CONSULTANTS</span></div>
+            <h1>Conseiller·ère comptable confirmé·e</h1>
+            <p class="subtitle">CDI — Seyssinet-Pariset (38170) — Prise de poste après ta période fiscale 2026</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Le cabinet</h2>
+                <p>Hermès Consultants, cabinet d'expertise comptable de 12 personnes, deux sites (Seyssinet-Pariset et Voiron), inscrit à l'Ordre des Experts-Comptables de la Région Rhône-Alpes. Modèle d'accompagnement structuré en 4 niveaux de maturité entrepreneuriale (se lancer, devenir employeur, basculer en N+1, devenir dirigeant). CRM métier propriétaire développé en interne. Ouverture du capital prévue fin 2026 (10% collaborateurs, 10% directeur — conditions : 3 ans de présence minimum et alignement valeurs cabinet).</p>
+                <div class="highlight">
+                    <p style="margin: 0;"><strong>En 2026, le cabinet franchit une nouvelle étape avec un projet de transformation profonde qui va changer la façon d'exercer le métier. Tu en feras partie dès le départ.</strong></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>L'équipe Seyssinet-Pariset</h2>
+                <p>5 personnes sous la direction d'Arthur Viale (gérant) : <span class="team-list">Anthony MULLER, Inès BOREL, Lauriane MENDUNI, Quentin BRUNET et Florence CASO</span> + toi.</p>
+                <p>Cordée de travail (binôme référent fixe pendant les 6 premiers mois). Production mensuelle organisée par cycles clients (pas de gestion de deadline à la semaine). Rituels : point d'équipe hebdomadaire, bilan de production mensuel, Hermès d'Or annuel.</p>
+            </div>
+
+            <div class="section">
+                <h2>Le poste</h2>
+                <p>Conseiller·ère comptable confirmé·e en autonomie complète sur un portefeuille clients mixte (TPE secteur BIC/IS et professions libérales BNC). Périmètre : tenue comptable, révision mensuelle ou trimestrielle, bilan annuel, accompagnement client direct (pas de simple exécution déléguée). Logiciels métiers : ACD (production), WAIBI (en cours de déploiement), RCA (pilotage), CRM interne (relation client et pilotage).</p>
+                <p><strong>Mission centrale :</strong> rendre l'immatériel matériel. Vulgariser pour responsabiliser. Traduire les chiffres en décisions. Le cabinet ne produit pas que des bilans, il accompagne des trajectoires entrepreneuriales.</p>
+            </div>
+
+            <div class="section">
+                <h2>Profil recherché</h2>
+                <p>Expérience minimum 3 ans en cabinet d'expertise comptable. Autonomie confirmée sur la chaîne comptable complète (de la saisie au bilan). Maîtrise des régimes BIC/IS et BNC (déclaration contrôlée). Aisance relationnelle client (tu es l'interlocuteur direct du chef d'entreprise, pas un back-office). Capacité de vulgarisation (expliquer simplement des notions complexes fait partie du métier ici). Alignement avec les valeurs du cabinet : empathie, rigueur, humilité, responsabilité, pédagogie, amélioration continue.</p>
+            </div>
+
+            <div class="section">
+                <h2>Conditions</h2>
+                <div class="conditions-grid">
+                    <div class="condition-item">
+                        <strong>⏰ Temps de travail</strong>
+                        CDI 35h avec semaine de 4 jours de juin à décembre
+                    </div>
+                    <div class="condition-item">
+                        <strong>💰 Rémunération</strong>
+                        Transparente + primes discrétionnaire
+                    </div>
+                    <div class="condition-item">
+                        <strong>🎯 Casquette transversale</strong>
+                        Objectif SMART rémunéré à la hauteur
+                    </div>
+                    <div class="condition-item">
+                        <strong>🏠 Télétravail</strong>
+                        1 à 2 jours/semaine après intégration
+                    </div>
+                    <div class="condition-item">
+                        <strong>🍽️ Tickets restaurant</strong>
+                        60% employeur / 40% salarié
+                    </div>
+                    <div class="condition-item">
+                        <strong>🏥 Mutuelle</strong>
+                        100% employeur (zéro coût salarié)
+                    </div>
+                    <div class="condition-item">
+                        <strong>🎂 Jour d'anniversaire</strong>
+                        Offert chaque année
+                    </div>
+                    <div class="condition-item">
+                        <strong>🎄 24 décembre</strong>
+                        Chômé
+                    </div>
+                    <div class="condition-item">
+                        <strong>🎁 Chèques cadeaux</strong>
+                        Tout au long de l'année
+                    </div>
+                    <div class="condition-item">
+                        <strong>🏖️ Séminaires</strong>
+                        Été et hiver + afterworks
+                    </div>
+                    <div class="condition-item">
+                        <strong>📊 Participation</strong>
+                        Après 3 ans (ouverture capital fin 2026)
+                    </div>
+                    <div class="condition-item">
+                        <strong>📋 Convention collective</strong>
+                        Cabinets d'expertise comptable
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Processus de recrutement</h2>
+                <div class="process">
+                    <div class="process-step">
+                        <span class="step-number">1</span>
+                        <span>Entretien téléphonique de préqualification (15 min)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">2</span>
+                        <span>Entretien en présentiel avec Arthur Viale (1h)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">3</span>
+                        <span>Entretien final avec un ou deux membres de l'équipe Seyssinet (30 min)</span>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">4</span>
+                        <span>Réponse définitive sous 10 jours après le dernier entretien</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h3>Tu te reconnais dans ce profil ?</h3>
+            <a href="mailto:expertisesaudit@hermesconsultants.fr" class="cta-email">Envoyer ma candidature</a>
+            <p class="cta-details">CV et lettre de motivation — Avant le 30 juin 2026</p>
+        </div>
+
+        <div class="footer">
+            HERMÈS CONSULTANTS — 8B, Avenue Pierre de Coubertin — Percevalière — 38170 Seyssinet-Pariset<br>
+            04 76 48 06 05 — expertisesaudit@hermesconsultants.fr
+        </div>
+    </div>
+</body>
+</html>
